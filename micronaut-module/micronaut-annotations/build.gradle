@@ -8,7 +8,6 @@ micronaut {
 
 dependencies {
     api project(':core')
-    compileOnly 'io.micrometer:micrometer-core'
     implementation 'io.micronaut:micronaut-inject-java'
 
     testImplementation 'io.micronaut.test:micronaut-test-junit5'

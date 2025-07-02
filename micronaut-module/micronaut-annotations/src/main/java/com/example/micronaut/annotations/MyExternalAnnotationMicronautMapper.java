@@ -21,15 +21,19 @@ public class MyExternalAnnotationMicronautMapper implements TypedAnnotationMappe
 
     @Override
     public List<AnnotationValue<?>> map(AnnotationValue<MyExternalAnnotation> annotation, VisitorContext visitorContext) {
-        LOGGER.warn("mapping annotation: " + annotation);
+        visitorContext.warn("mapping annotation: " + annotation, null);
 //        return List.of(AnnotationValue.builder(annotation)
 //                .stereotype(AnnotationValue.builder(Executable.class)
 //                        .member("processOnStartup", true)
 //                        .build())
 //                .stereotype(AnnotationValue.builder(ReflectiveAccess.class).build())
 //                .build());
-        return List.of(AnnotationValue.builder(Executable.class)
+        AnnotationValue<Executable> executable = AnnotationValue.builder(Executable.class)
                 .member("processOnStartup", true)
-                .build());
+                .build();
+        return List.of(AnnotationValue.builder(annotation)
+                .stereotype(executable)
+                .build()
+        );
     }
 }
