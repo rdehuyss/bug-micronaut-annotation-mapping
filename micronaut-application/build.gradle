@@ -1,0 +1,33 @@
+plugins {
+    id("io.micronaut.application") version "4.5.3"
+}
+
+micronaut {
+    version '4.8.2'
+    runtime("netty")
+    testRuntime("junit5")
+//    processing {
+//        incremental true
+//        annotations "com.example.demo.**"
+//    }
+}
+
+dependencies {
+    annotationProcessor 'io.micronaut:micronaut-inject-java'
+    annotationProcessor project(':micronaut-module:micronaut-annotations')
+    //compileOnly project(':micronaut-module:micronaut-annotations')
+    //implementation project(':micronaut-module:micronaut-annotations')
+    implementation project(':core')
+    implementation project(':micronaut-module:micronaut-feature')
+    implementation 'io.micronaut:micronaut-inject-java'
+    implementation 'io.micronaut:micronaut-jackson-databind'
+
+    runtimeOnly 'ch.qos.logback:logback-classic'
+
+    testImplementation 'org.assertj:assertj-core'
+}
+
+
+application {
+    mainClass.set("com.example.demo.Application")
+}

@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+    id 'io.micronaut.library' version '4.5.4'
+    id 'maven-publish'
+}
+
+micronaut {
+    version '4.8.3'
+}
+
+dependencies {
+    api project(':core')
+    // annotationProcessor project(':micronaut-module:micronaut-annotations')
+    implementation 'io.micronaut:micronaut-inject-java'
+}

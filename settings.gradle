@@ -1,0 +1,5 @@
+rootProject.name = 'micronaut-annotation'
+include 'core'
+include 'micronaut-application'
+include 'micronaut-module:micronaut-annotations'
+include 'micronaut-module:micronaut-feature'

@@ -1,0 +1,28 @@
+plugins {
+    id 'io.micronaut.minimal.library' version '4.5.4'
+}
+
+micronaut {
+    version '4.8.3'
+}
+
+dependencies {
+    api project(':core')
+    compileOnly 'io.micrometer:micrometer-core'
+    implementation 'io.micronaut:micronaut-inject-java'
+
+    testImplementation 'io.micronaut.test:micronaut-test-junit5'
+    testImplementation 'io.micronaut:micronaut-inject-java'
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+normalization {
+    runtimeClasspath {
+        ignore '**/MANIFEST.MF'
+        ignore '**/frontend/**'
+    }
+}
