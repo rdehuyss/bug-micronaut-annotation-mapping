@@ -1,7 +1,7 @@
 package com.example.demo.api;
 
 import com.example.demo.services.MyService;
-import com.example.handlers.MyOtherService;
+import com.example.services.MyOtherService;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;

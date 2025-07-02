@@ -1,7 +1,7 @@
 package com.example.factory;
 
-import com.example.handlers.MyAnnotationService;
-import com.example.handlers.MyOtherService;
+import com.example.services.MyAnnotationService;
+import com.example.services.MyOtherService;
 import io.micronaut.context.annotation.Factory;
 import jakarta.inject.Singleton;
 

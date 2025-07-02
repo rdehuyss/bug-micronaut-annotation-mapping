@@ -1,7 +1,7 @@
 package com.example.processors;
 
 import com.example.annotations.MyInternalAnnotation;
-import com.example.handlers.MyAnnotationService;
+import com.example.services.MyAnnotationService;
 import io.micronaut.context.annotation.Requires;
 import io.micronaut.context.processor.ExecutableMethodProcessor;
 import io.micronaut.inject.BeanDefinition;
